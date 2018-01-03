@@ -1,0 +1,114 @@
+.sidebar {
+	.widget {
+		background:lighten($brand-success, 10%);
+		padding:20px 30px;
+		border:5px solid #fff;
+		box-shadow:0 0 0 0.1em #D8D3C4;
+		margin-bottom:30px;
+		h2 {
+			text-align: center;
+			color:$brand-primary;
+			text-transform: uppercase;
+		}
+		&.recent-posts, &.popular-posts, &.archive-posts {
+			ul {
+				list-style-type:none;
+				padding-left:0;
+				margin-bottom:0;
+				li {
+					padding:10px 15px;
+					margin:0 -30px;
+					border-bottom:3px solid #fff;
+					transition:all 0.3s ease-in-out;
+					&:last-child {
+						border-bottom:none;
+					}
+					&:hover {
+						background:$brand-info;
+						p {
+							color:#fff;
+							margin-left:10px;
+						}
+						i {
+							transform:rotate(45deg);
+							color:#fff !important;
+						}
+					}
+					a {
+						text-decoration: none;
+						.text {
+							display:flex;
+							flex-wrap:wrap;
+							p {
+								flex:1 1 35%;
+								transition:all 0.3s ease-in-out;
+							}
+							i {
+								font-size:30px;
+								color:$brand-info;
+								transition:all 0.3s ease-in-out;
+								display:flex;
+								align-items:center;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.archive-posts {
+			ul {
+				li {
+					&:first-child {
+						display:none;
+					}
+					&:hover {
+						a {
+							color:#fff;
+							margin-left:10px;
+						}
+					}
+					a {
+						transition:all 0.3s ease-in-out;
+						display:block;
+						.count {
+							font-style:italic;
+						}
+						i {
+							float:right;
+							font-size:30px;
+							color:$brand-info;
+							transition:all 0.3s ease-in-out;
+							display:flex;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cta-widget {
+		padding-bottom:2em;
+		background:$brand-primary;
+		border-radius:.5em;
+		img {
+			border-radius:0.5em 0.5em 0 0;
+		}
+		.btn-info {
+			padding:20px;
+			margin:20px auto;
+			display:block;
+			border:none;
+			transition:all 0.3s ease-in-out;
+			&:hover {
+				background:#D3CDBC;
+				a {
+					color:$brand-primary;
+				}
+			}
+			a {
+				transition:all 0.3s ease-in-out;
+				color:#fff;
+				text-decoration: none;
+			}
+		}
+	}
+}

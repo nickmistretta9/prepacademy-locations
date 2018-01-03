@@ -1,0 +1,160 @@
+.top-fix {
+	position:fixed;
+	width:100%;
+	z-index:99;
+}
+.site-header {
+	background:$brand-success;
+	position:relative;
+	padding:15px 0;
+	input {
+		background:$brand-primary;
+	}
+	::placeholder {
+		color:#fff;
+		@include max-width($screen-sm) {
+			font-size:16px;
+		}
+	}
+	.h4 {
+		font-size:26px;
+	}
+	.logo {
+		position:absolute;
+		left:2%;
+		top:45%;
+		z-index:99;
+		transition:all 0.6s ease-in-out;
+		transform:scale(1.1);
+		@include max-width(1500px) {
+			transform:scale(0.9);
+			top:5%;
+			left:0;
+		}
+		@include max-width(650px) {
+			top:90%;
+		}
+		&.small {
+			transform:scale(0.9);
+			top:5%;
+			@include max-width(650px) {
+				top:90%;
+			}
+ 		}
+	}
+	.franchise {
+		position:absolute;
+		background:$brand-info;
+		right:0;
+		top:0;
+		color:#fff;
+		padding:10px;
+		max-width:180px;
+		text-align: center;
+		transition:all 0.3s ease-in-out;
+		@include max-width(1200px) {
+			padding:5px;
+			max-width:150px;
+		}
+		@include max-width(1000px) {
+			display:none;
+		}
+		&:hover {
+			top:20px;
+		}
+		a {
+			color:#fff;
+			text-decoration:none;
+			p {
+				font-size:20px;
+				padding-top:10px;
+				line-height:1;
+				@include max-width(1200px) {
+					font-size:18px;
+				}
+			}
+		}
+		&:before {
+			content:'';
+			position:absolute;
+			top:-30px;
+			left:0;
+			width:100%;
+			background:$brand-info;
+			height:30px;
+		}
+		&:after {
+			content:'';
+			position:absolute;
+			top:100%;
+			left:0;
+			width:0;
+			height:0;
+			border-top:40px solid $brand-info;
+			border-left:110px solid transparent;
+			border-right:110px solid transparent;
+			@include max-width(1200px) {
+				border-left:90px solid transparent;
+				border-right:90px solid transparent;
+			}
+		}
+	}
+	.flex {
+		display:flex;
+		align-items:center;
+		justify-content:flex-end;
+		@include max-width(1500px) {
+			justify-content:center;
+		}
+		@include max-width(1000px) {
+			justify-content:flex-end;
+		}
+		div {
+			&:first-child {
+				.h4 {
+					text-transform: uppercase;
+					font-weight:400;
+					color:$brand-primary;
+					@include max-width(1000px) {
+						font-size:20px;
+					}
+					@include max-width($screen-sm) {
+						display:none;
+					}
+				}
+				margin-right:10px;
+			}
+			&:nth-child(2) {
+				margin-left:15px;
+				.location-info {
+					background:$brand-info;
+					color:#fff;
+					font-style:italic;
+					padding:5px 20px;
+					border-radius:5px;
+					font-family:$font-family-fancy;
+				}
+			}
+			&:last-child {
+				margin-left:-15px;
+				.btn-info {
+					font-size:24px;
+					padding:5px 15px;
+					background:#fff;
+					transition:all 0.3s ease-in-out;
+					border:none;
+					a {
+						text-decoration:none;
+						transition:all 0.3s ease-in-out;
+					}
+					&:hover {
+						background:$brand-primary;
+						a {
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}

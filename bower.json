@@ -1,0 +1,24 @@
+{
+  "name": "gulp-framework",
+  "description": "Web development framework using Gulp, Bootstrap and Sass",
+  "main": "index.js",
+  "authors": [
+    "Driven Local Web Team"
+  ],
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/drivenlocal/gulp-framework#readme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "aos": "^2.2.0",
+    "matchHeight": "jquery-match-height#^0.7.2",
+    "magnific-popup": "^1.1.0"
+  }
+}
