@@ -531,16 +531,37 @@
 		.group {
 			position:relative;
 		}
+		.caldera-grid {
+			.form-control {
+				height:auto;
+			}
+			select {
+				caret-color:#fff;
+				appearance:menulist;
+			}
+			::placeholder {
+				color:#fff;
+			}
+		}
 		input, textarea, select {
 			background:none;
-			border:none;
 			box-shadow:none;
 			caret-color:#fff;
 			margin-top:10px;
-			color:rgba(lighten($brand-primary, 30%), 0.7);
-		}
-		::placeholder {
-			color:rgba(lighten($brand-primary, 30%), 0.7);	
+			font-size:23px;
+			color:#fff;
+			::placeholder {
+				color:#fff;	
+			}
+			position:relative;
+			&:after {
+				content:'';
+				position:absolute;
+				width:100%;
+				bottom:0;
+				left:0;
+				height:1px;
+			}
 		}
 		span {
 			content:'';
@@ -559,14 +580,26 @@
 				top:0;
 			}
 		}
-		.btn-info {
+		.btn-info, .btn-default {
+			background:$brand-info;
 			margin:10px auto;
 			display:block;
 			padding:20px 30px;
 			transition:all 0.3s ease-in-out;
 			border:none;
+			color:#fff;
+			max-width:100%;
+			text-align: center;
 			&:hover {
 				background:$brand-primary;
+				color:#fff;
+			}
+			@include max-width($screen-xs) {
+				font-size:16px;
+				padding:20px 40px;
+			}
+			@include max-width(400px) {
+				padding:20px;
 			}
 		}
 	}

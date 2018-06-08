@@ -21,8 +21,13 @@
 		@include max-width(900px) {
 			max-width:none;
 		}
+		@include max-width(700px) {
+			padding-bottom:0;
+			padding-top:0;
+		}
 		@include max-width($screen-xs) {
 			padding-left:250px;
+			padding-top:0;
 		}
 		.social-icons {
 			display:flex;
@@ -203,10 +208,19 @@
 			align-items:flex-end;
 		}
 		@include max-width($screen-xs) {
-			margin-top:20px;
+			margin-top:0px;
 			font-size:20px;
 			margin-left:0;
 			flex:1 1 10%;
+		}
+		&.mobile-ctc {
+			text-decoration:none;
+			color:#fff;
+			display:flex;
+			flex-direction:column;
+			i {
+				text-align:right;
+			}	
 		}
 	}
 }
@@ -266,7 +280,7 @@
 }
 
 .st-menu {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;

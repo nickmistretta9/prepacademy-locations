@@ -1,8 +1,5 @@
 .inner-content {
 	padding-top:200px;
-	@include max-width($screen-xs) {
-		padding-top:250px;
-	}
 	.container-fluid {
 		max-width:1500px;
 	}
@@ -133,7 +130,6 @@
 				}
 				.about-us-box {
 					background:$brand-primary;
-					padding:30px;
 					border-radius:0.5em;
 					box-shadow:0 0 0em 0.25em #00263A;
 					border:0.25em solid $brand-success;
@@ -142,6 +138,7 @@
 						text-decoration:none;
 						display:block;
 						transition:all 0.3s ease-in-out;
+						padding:20px;
 					}
 					&:hover {
 						.learning {
@@ -165,12 +162,12 @@
 					}
 					.learning {
 						background:$brand-info;
-						width:108.5%;
+						width:100%;
 						text-align: center;
 						color:#fff;
 						display:block;
 						padding:10px;
-						margin:25px -29px 0;
+						margin:30px 0;
 						transition:all 0.3s ease-in-out;
 					}
 				}
@@ -653,16 +650,22 @@
 					max-width:20%;
 					flex:1 1 20%;
 				}
-				@include max-width($screen-sm) {
-					flex:1 1 30%;
-					max-width:30%;
+				@include max-width(1100px) {
+					flex:1 1 32%;
+					max-width:32%;
 				}
-				@include max-width(600px) {
+				@include max-width(850px) {
 					flex:1 1 45%;
 					max-width:45%;
 				}
+				@include max-width(600px) {
+					flex:1 1 100%;
+					max-width:100%;
+				}
 				.image {
-					max-height:280px;
+					height:280px;
+					background-position:center;
+					background-size:cover;
 					overflow:hidden;
 					@include max-width(1200px) {
 						max-height:215px;
@@ -680,13 +683,18 @@
 					flex-flow:column wrap;
 					padding:20px 10px;
 					color:#fff;
+					min-height:380px;
 					.name {
 						font-size:36px;
+						text-transform:lowercase;
+						.upper {
+							text-transform:uppercase;
+						}
 					}
 					.subjects, .grades {
 						margin:10px 0;
 						span {
-							font-size:30px;
+							font-size:22px;
 							text-transform: uppercase;
 						}
 					}
@@ -755,17 +763,29 @@
 		}
 	}
 	&.owners-content {
+		padding-bottom:40px;
 		h1 {
 			text-transform: uppercase;
 			color:$brand-primary;
+			@include max-width(600px) {
+				font-size:46px;
+			}
 		}
 		.owner-information {
 			display:flex;
+			@include max-width(600px) {
+				flex-wrap:wrap;
+			}
 			.picture {
 				flex:1 1 5%;
 				display:flex;
 				align-items:flex-start;
 				margin-top:40px;
+				@include max-width(600px) {
+					flex:1 1 100%;
+					justify-content:center;
+					order:2;
+				}
 				img {
 					border:4px solid $brand-info;
 					border-radius:5px;
@@ -774,9 +794,16 @@
 			.info {
 				flex:1 1 50%;
 				margin-left:50px;
+				@include max-width(600px) {
+					flex:1 1 100%;
+					margin-left:0;
+				}
 				h2 {
 					color:$brand-info;
 					font-style:italic;
+					@include max-width($screen-xs) {
+						margin-top: 0;
+					}
 				}
 			}
 		}
