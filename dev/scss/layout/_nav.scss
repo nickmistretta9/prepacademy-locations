@@ -8,6 +8,7 @@
 		display:flex;
 		padding:15px 0;
 		max-width:1400px;
+		justify-content:space-between;
 		@include max-width(1750px) {
 			max-width:1170px;
 			padding-left:70px;
@@ -25,8 +26,8 @@
 			padding-bottom:0;
 			padding-top:0;
 		}
-		@include max-width($screen-xs) {
-			padding-left:250px;
+		@include max-width(505px) {
+			padding-left:150px;
 			padding-top:0;
 		}
 		.social-icons {
@@ -38,12 +39,12 @@
 			a {
 				color:#fff;
 				background:$brand-info;
-				margin:0 15px;
-				padding:5px 10px;
+				margin:0 12px;
 				transform:rotate(-45deg);
 				transition:all 0.3s ease-in-out;
+				height:40px;
+				width:40px;
 				@include max-width(1600px) {
-					// padding:5px 12px;
 					margin:0 5px;
 				}
 				&:hover {
@@ -52,16 +53,14 @@
 						transform:rotate(90deg);
 					}
 				}
-				&:last-child {
-					padding:5px 14px;
-					@include max-width(1600px) {
-						padding:5px 15px;
-					}
-				}
 				i {
 					font-size:22px;
 					transform:rotate(45deg);
 					transition:all 0.3s ease-in-out;
+					height:100%;
+					display:flex;
+					align-items:center;
+					justify-content:center;
 					@include max-width(1600px) {
 						font-size:16px;
 					}
@@ -91,6 +90,7 @@
 	.navbar-nav {
 		list-style-type:none;
 		display:flex;
+		height:100%;
 		@include max-width(900px) {
 			display:none;
 		}
@@ -116,9 +116,10 @@
 				font-weight: 400;
 				color:lighten($brand-success, 10%) !important;
 				background:none !important;
-				font-size:18px;
+				font-size:16px;
 				transition:all 0.4s ease-in-out;
 				border-bottom:3px solid $brand-primary;
+				line-height:1;
 				@include max-width(1500px) {
 					font-size:15px;
 					padding:5px 10px;
@@ -150,6 +151,7 @@
 			padding-top: 6px;
 			padding-bottom: 6px;
 			transition:all 0.3s ease-in-out;
+			font-size:16px;
 		}
 		&.active {
 			&:hover {
@@ -169,9 +171,14 @@
 		justify-content:space-between;
 		flex-wrap:wrap;
 	}
+	@include max-width(700px) {
+		width:100%;
+	}
+	@include max-width(500px) {
+		margin-top:20px;
+	}
 	@include max-width($screen-xs) {
-		margin-top:40px;
-		margin-left:-100px;
+		padding-top:25px;
 	}
 	.mobile-phone {
 		width:100%;
@@ -186,11 +193,30 @@
 			margin-top:-35px;
 		}
 	}
+	.mobile-toggle {
+		align-items:center;
+		@include max-width($screen-xs) {
+			flex-direction:column;
+			align-items:flex-end;
+		}
+		.fa-bars {
+			text-align:right;
+			display:flex;
+			justify-content:flex-end;
+			@include min-width(700px) {
+				width:100%;
+			}
+		}
+	}
 	.mobile-toggle, .call, .email {
+		i {
+			display:flex;
+			align-items:center;
+			margin-right:5px;
+		}
 
 		@include max-width($grid-float-breakpoint-max) {
 			display: flex;
-			flex-flow:column wrap;
 			flex:1 1 15%;
 			justify-content:center;
 			margin-left: 30px;
@@ -204,23 +230,30 @@
 			width:100%;
 			text-align:left;
 		}
-		@include max-width(700px) {
-			align-items:flex-end;
+		@include max-width(730px) {
+			margin-left:20px;
 		}
-		@include max-width($screen-xs) {
-			margin-top:0px;
-			font-size:20px;
-			margin-left:0;
-			flex:1 1 10%;
+		@include max-width(425px) {
+			margin-left:5px;
+		}
+		@include max-width(400px) {
+			margin-left:0px;
+			// margin-top:20px;
+			padding:0;
+			flex:1 1 5%;
 		}
 		&.mobile-ctc {
 			text-decoration:none;
 			color:#fff;
 			display:flex;
-			flex-direction:column;
+			align-items:center;
 			i {
 				text-align:right;
-			}	
+			}
+			@include max-width($screen-xs) {
+				flex-direction:column;
+				align-items:flex-end;
+			}
 		}
 	}
 }

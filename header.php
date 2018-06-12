@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div class="franchise">
-			<a href=""><p>Franchise Opportunities</p></a>
+			<a href="http://franchise.prepacadtutors.wpengine.com"><p>Franchise Opportunities</p></a>
 		</div>
 	</header>
 
@@ -99,3 +99,4 @@
 	    </div>
 	</nav>
 </div>
+<div class="placeholder"></div>

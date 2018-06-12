@@ -1,14 +1,16 @@
 .top-fix {
-	position:fixed;
 	width:100%;
 	z-index:99;
+	&.fixed {
+		position:fixed;
+	}
 }
 .site-header {
 	background:$brand-success;
 	position:relative;
-	padding:15px 0;
-	@include max-width(700px) {
-		padding:10px 0;
+	padding:0;
+	@include max-width($screen-sm) {
+		padding:5px 0;
 	}
 	input {
 		background:$brand-primary;
@@ -35,17 +37,14 @@
 			left:0;
 		}
 		@include max-width(550px) {
+			top:0;
+			transform:scale(0.7);
+		}
+		@include max-width(500px) {
+			transform:scale(0.6);
 			top:40%;
 			left:-20px;
-			transform:scale(0.6);
 		}
-		&.small {
-			transform:scale(0.9);
-			top:5%;
-			@include max-width(650px) {
-				top:90%;
-			}
- 		}
 	}
 	.franchise {
 		position:absolute;
@@ -53,29 +52,43 @@
 		right:0;
 		top:0;
 		color:#fff;
-		padding:10px;
-		max-width:180px;
+		max-width:200px;
 		text-align: center;
 		transition:all 0.3s ease-in-out;
-		@include max-width(1200px) {
-			padding:5px;
+		z-index:99;
+		@include max-width(1500px) {
 			max-width:150px;
+		}
+		@include max-width(1250px) {
+			padding:5px;
+		}
+		@include max-width(1200px) {
+			top:8px;
 		}
 		@include max-width(1000px) {
 			display:none;
 		}
 		&:hover {
-			top:20px;
+			@include min-width(1200px) {
+				top:20px;
+			}
 		}
 		a {
 			color:#fff;
 			text-decoration:none;
+			display:block;
+			padding:10px;
+			@include max-width(1500px) {
+				padding:5px;
+			}
 			p {
 				font-size:20px;
 				padding-top:10px;
 				line-height:1;
-				@include max-width(1200px) {
-					font-size:18px;
+				margin-bottom: 0;
+				@include max-width(1250px) {
+					font-size:16px;
+					padding-top:0;
 				}
 			}
 		}
@@ -98,9 +111,16 @@
 			border-top:40px solid $brand-info;
 			border-left:110px solid transparent;
 			border-right:110px solid transparent;
-			@include max-width(1200px) {
+			@include max-width(1500px) {
+				border-top:30px solid $brand-info;
 				border-left:90px solid transparent;
 				border-right:90px solid transparent;
+			}
+			@include max-width(1250px) {
+				border-top:20px solid $brand-info;
+			}
+			@include max-width(1200px) {
+				display:none;
 			}
 		}
 	}

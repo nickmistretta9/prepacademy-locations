@@ -18,19 +18,19 @@ Template Name: Home Page
 	<div class="container-fluid">
 		<div class="flex">
 			<div class="cta-box">
-				<p class="title">Making Parents and Kids Happy</p>
+				<p class="title" data-mh>Making Parents and Kids Happy</p>
 				<div class="cta-action">
 					<a href="http://prepacadtutors.wpengine.com/testimonials/">Our Reviews</a>
 				</div>
 			</div>
 			<div class="cta-box">
-				<p class="title">All PAT Tutors are Certified Teachers</p>
+				<p class="title" data-mh>All PAT Tutors are Certified Teachers</p>
 				<div class="cta-action">
 					<a href="<?php echo home_url('/our-tutors'); ?>">Our Tutors</a>
 				</div>
 			</div>
 			<div class="cta-box">
-				<p class="title">Get the Tutoring Your Student Needs</p>
+				<p class="title" data-mh>Get the Tutoring Your Student Needs</p>
 				<div class="cta-action">
 					<a href="http://prepacadtutors.wpengine.com/our-services/">Our Services</a>
 				</div>
@@ -46,14 +46,14 @@ Template Name: Home Page
 		<div class="flex">
 			<div class="first-third">
 				<div class="sub">
-					<div class="icon-container"><img src="<?php bloginfo('template_directory'); ?>/dist/images/icon-award.png"></div>
+					<div class="icon-container"></div>
 					<div class="text">
 						<h3>Certified Teachers</h3>
 						<p>Our tutors have proper experience and qualifications to make sure your student succeeds.</p>
 					</div>
 				</div>
 				<div class="sub">
-					<div class="icon-container"><i class="fa fa-home"></i></div>
+					<div class="icon-container"></div>
 					<div class="text">
 						<h3>Flexible In-Home Tutoring</h3>
 						<p>Our tutors come to you at the times you decide, so tutoring fits into your and your c hild's schedule.</p>
@@ -66,14 +66,14 @@ Template Name: Home Page
 			</div>
 			<div class="third-third">
 				<div class="sub">
-					<div class="icon-container"><i class="fa fa-user"></i></div>
+					<div class="icon-container"></div>
 					<div class="text">
 						<h3>Personal Attention</h3>
 						<p>We offer a high level of service, professionalism and work to form a bond with your child.</p>
 					</div>
 				</div>
 				<div class="sub">
-					<div class="icon-container"><i class="fa fa-graduation-cap"></i></div>
+					<div class="icon-container"></div>
 					<div class="text">
 						<h3>Boost Your Child's Confidence</h3>
 						<p>Improved grades and understanding of subject matter often results in a boost in your child's confidence.</p>
@@ -123,7 +123,7 @@ Template Name: Home Page
 				<p>Enrichment Programs</p>
 			</li>
 		</ul>
-		<button class="btn-info"><a href="<?php echo home_url('/how-we-work'); ?>">Learn About How We Work</a></button>
+		<button class="btn-info"><a href="http://prepacadtutors.wpengine.com/how-we-work">Learn About How We Work</a></button>
 	</div>
 </section>
 <section class="map-area">

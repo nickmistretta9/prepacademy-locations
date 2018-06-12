@@ -8,30 +8,15 @@ Template Name: Tutors Page
 
 <section class="inner-content tutors-content">
 	<div class="container-fluid">
-		<section class="tutor-filter">
-			<div class="container-fluid">
-				<div class="flex-row">
-					<div class="grade-search">
-						<p>Narrow Your Search:</p>
-						<select name="" class="form-control">
-							<option selected value="clear">Search By Grade</option>
-						</select>
-						<?php endwhile; ?>
-						<?php wp_reset_query(); ?>
-					</div>
-					<div class="subject-search"></div>
-					<div class="name-search"></div>
-				</div>
-			</div>
-		</section>
 		<div class="tutors-list">
 			<?php 
 			    $args = array( 'post_type' => 'tutor', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => '10', 'paged' => get_query_var('paged') ? get_query_var('paged') : 1 );
 			    $loop = new WP_Query( $args );
 			    while ( $loop->have_posts() ) : $loop->the_post();
 			
-			    $picture = types_render_field("picture", array("raw"=>"html"));
+			    $picture = types_render_field("picture", array("raw"=>"html") );
 			    $name = types_render_field( "name", array("raw"=>"true") );
+			    $title = types_render_fielD( "title", array("raw"=>"true") );
 			    $subjects = types_render_field( "subjects", array("raw"=>"true") );
 			    $grades = types_render_field( "grades", array("raw"=>"true") );
 			    $bio = types_render_field( "bio", array("raw"=>"true") );
@@ -50,6 +35,7 @@ Template Name: Tutors Page
 				<div class="image" style="background-image:url('<?php echo $imgSrc; ?>');"></div>
 				<div class="info">
 					<div class="name"><span class="upper"><?php echo $firstLetter ?></span><?php echo substr($firstName, 1); ?> <span class="upper"><?php echo $secondLetter; ?></span>.</div>
+					<div class="title"><?php echo $title; ?></div>
 					<div class="subjects"><span>Subjects:</span> <?php echo $subjects ?></div>
 					<div class="grades"><span>Grade Levels:</span> <?php echo $grades ?></div>
 					<button class="btn-info"><a href="<?php echo $link ?>">Meet <?php echo $firstName ?></a></button>

@@ -1,6 +1,5 @@
 .hero {
 	position:relative;
-	padding-top:150px;
 	.hero-slider {
 		img {
 			@include max-width(1500px) {
@@ -20,8 +19,7 @@
 	}
 	.hero-caption {
 		position:absolute;
-		@include center(x);
-		top:30%;
+		@include center();
 		img {
 			@include max-width(1500px) {
 				width:90%;
@@ -29,15 +27,6 @@
 			@include max-width($screen-sm) {
 				width:100%;
 			}
-		}
-		@include max-width(1100px) {
-			top:40%;
-		}
-		@include max-width($screen-sm) {
-			top:45%;
-		}
-		@include max-width($screen-xs) {
-			top:60%;
 		}
 	}
 }
@@ -50,7 +39,7 @@
 	}
 	.flex {
 		display:flex;
-		@include max-width($screen-sm) {
+		@include max-width(1025px) {
 			flex-wrap:wrap;
 		}
 		.cta-box {
@@ -63,11 +52,16 @@
 			box-shadow:0 0 0em 0.14em $brand-primary;
 			border:0.25em solid $brand-success;
 			transition:all 0.3s ease-in-out;
-			@include max-width($screen-sm) {
+			@include max-width(1025px) {
 				margin-bottom:30px;
+				flex:1 1 45%;
+				padding:10px 20px;
+			}
+			@include max-width(500px) {
+				flex:1 1 100%;
 			}
 			&:hover {
-				transform:scale(1.1);
+				transform:scale(1.05);
 				background:$brand-info;
 				.cta-action {
 					background:$brand-primary;
@@ -218,6 +212,34 @@
 				flex:1 1 50%;
 			}
 		}
+		.first-third {
+			.sub {
+				&:first-of-type {
+					.icon-container {
+						background-image:url('../images/certificate-bg.png');
+					}
+				}
+				&:last-of-type {
+					.icon-container {
+						background-image:url('../images/home-bg.png');
+					}
+				}
+			}
+		}
+		.third-third {
+			.sub {
+				&:first-of-type {
+					.icon-container {
+						background-image:url('../images/person-bg.png');
+					}
+				}
+				&:last-of-type {
+					.icon-container {
+						background-image:url('../images/graduation-bg.png');
+					}
+				}
+			}
+		}
 		.second-third {
 			flex:1 1 45%;
 			background-image:url('../images/value-content-bg.png');
@@ -233,48 +255,39 @@
 				order:1;
 				flex:1 1 100%;
 			}
+			@include max-width(600px) {
+				padding:4em 5%;
+			}
+			@include max-width(400px) {
+				margin:0;
+			}
 			p {
-				@include max-width($screen-xs) {
+				@include max-width(600px) {
 					font-size:20px;
+				}
+				@include max-width($screen-xs) {
+					font-size:18px;
 				}
 			}
 			h3 {
 				font-style:italic;
+				@include max-width(600px) {
+					font-size:32px;
+				}
+				@include max-width(400px) {
+					font-size:28px;
+				}
 			}
 		}
 		.sub {
 			display:flex;
 			.icon-container {
 				flex:1 1 15%;
-				background-image:url('../images/ribbon-bg.png');
 				background-repeat:no-repeat;
 				background-size:contain;
 				margin-right:10px;
 				margin-top:40px;
 				position:relative;
-				i {
-					color:$brand-info;
-					position:absolute;
-					font-size:28px;
-					top:12px;
-					@include center(x);
-					@include max-width(1100px) {
-						margin-top:20px;
-						font-size:40px;
-					}
-					@include max-width($screen-sm) {
-						margin-top:10px;
-						font-size:30px;
-					}
-					@include max-width($screen-xs) {
-						margin-top:0;
-					}
-				}
-				img {
-					width:40px;
-					margin:5px auto;
-					display:block;
-				}
 			}
 			.text {
 				flex:1 1 84%;
@@ -473,6 +486,18 @@
 		height:80%;
 		padding:4em 6.5%;
 		max-width:600px;
+		@include max-width(1050px) {
+			background-size:100% 98%;
+			padding:3em 5.5%;
+		}
+		@include max-width(800px) {
+			background-image:none;
+			background:#fff;
+			padding:20px;
+			height:auto;
+			@include center(x);
+			top:1em;
+		}
 		.search {
 			display:flex;
 			flex-direction:column;
@@ -484,12 +509,24 @@
 				border-radius:5px;
 				padding:10px 30px;
 				transition:all 0.3s ease-in-out;
+				@include max-width(800px) {
+					padding:5px;
+				}
 				&:hover {
 					background:$brand-primary;
 				}
 				a {
 					color:#fff;
 					text-decoration:none;
+				}
+			}
+		}
+		.text {
+			img {
+				margin:0 auto;
+				display:block;
+				@include max-width(1050px) {
+					max-height:180px;
 				}
 			}
 		}

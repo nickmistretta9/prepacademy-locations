@@ -1,5 +1,5 @@
 .inner-content {
-	padding-top:200px;
+	padding:40px 0;
 	.container-fluid {
 		max-width:1500px;
 	}
@@ -173,6 +173,7 @@
 				}
 				.col-sm-6 {
 					&:first-child {
+						margin-top:30px;
 						@include max-width($screen-sm) {
 							margin-bottom:40px;
 						}
@@ -186,7 +187,7 @@
 						background-size:cover;
 						height:100%;
 						min-height:500px;
-						margin:-20px -60px -60px 0;
+						margin-bottom: -60px;
 						padding-top:50px;
 						@include max-width($screen-sm) {
 							margin:0;
@@ -199,6 +200,29 @@
 						.contact-page-form {
 							background:rgba($brand-primary, 0.9);
 							padding:40px;
+							.caldera-grid {
+								.col-sm-12 {
+									display:flex;
+									flex-wrap:wrap;
+									.form-group {
+										flex:1 1 45%;
+										margin:0 15px;
+										.form-control {
+											height:auto;
+										}
+										select {
+											caret-color:#fff;
+											appearance:menulist;
+										}
+										::placeholder {
+											color:#fff;
+										}
+										&#fld_7683514_1-wrap {
+											flex:1 1 100%;
+										}
+									}
+								}
+							}
 							form {
 								display:flex;
 								flex-wrap:wrap;
@@ -210,11 +234,12 @@
 							}
 							input, textarea, select {
 								background:none;
-								border:none;
+								// border:none;
 								box-shadow:none;
 								caret-color:#fff;
 								margin-top:10px;
-								color:rgba(lighten($brand-primary, 30%), 0.7);
+								font-size:23px;
+								color:#fff;
 							}
 							::placeholder {
 								color:rgba(lighten($brand-primary, 30%), 0.7);	
@@ -236,15 +261,17 @@
 									top:0;
 								}
 							}
-							.btn-info {
+							.btn-info, .btn-default {
+								background:$brand-info;
 								margin:10px auto;
 								display:block;
 								padding:20px 30px;
 								transition:all 0.3s ease-in-out;
 								border:none;
-								width:55%;
+								color:#fff;
 								&:hover {
 									background:$brand-primary;
+									color:#fff;
 								}
 							}
 						}
@@ -254,6 +281,7 @@
 	}
 	&.contact-content {
 		background:$brand-success;
+		padding:0;
 	}
 	&.blog-content {
 		h1 {
@@ -690,6 +718,13 @@
 						.upper {
 							text-transform:uppercase;
 						}
+					}
+					.title {
+						background:#E5E1D4;
+						color:$brand-primary;
+						text-align: center;
+						line-height:1;
+						padding:5px;
 					}
 					.subjects, .grades {
 						margin:10px 0;

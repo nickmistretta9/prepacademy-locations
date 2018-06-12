@@ -70,6 +70,21 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	var placeholderHeight = $('.top-fix').outerHeight();
+	$(window).scroll(function() {
+		var topBar = $('.top-fix'),
+		scroll = $(window).scrollTop(),
+		placeholder = $('.placeholder');
+
+		if(scroll >= 25) {
+			topBar.addClass('fixed');
+			placeholder.css('height', placeholderHeight);
+		} else {
+			topBar.removeClass('fixed');
+			placeholder.css('height', 0);
+		}
+	});
+
 	// $(window).on('beforeunload', function() {
 	// 	$(window).scrollTop(0);
 	// });
@@ -491,11 +506,8 @@ function initMap() {
 			icon:'http://prepacadtutors.wpengine.com/wp-content/themes/prepacademy/dist/images/map-marker.png',
 			map:map
 		});
-		marker.addListener('mouseover', function() {
+		marker.addListener('click', function() {
 			infowindow.open(map, marker);
-		});
-		marker.addListener('mouseout', function() {
-			infowindow.close();
 		});
 	});
 }

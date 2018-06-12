@@ -3,26 +3,23 @@
 		<div class="flex">
 			<div class="links">
 				<ul>
-					<a href="<?php echo home_url('/work-with-us'); ?>">
+					<a href="http://prepacadtutors.wpengine.com/work-with-us/">
 						<li>Work With Us</li>
 					</a>
-					<a href="<?php echo home_url('/find-your-local-tutor'); ?>">
+					<a href="http://prepacadtutors.wpengine.com/find-your-local-tutor/">
 						<li>Find Your Local Tutor</li>
 					</a>
 					<a href="http://prepacadtutors.wpengine.com/blog/">
 						<li>Blog</li>
 					</a>
-					<a href="/contact">
+					<a href="<?php echo home_url('/contact'); ?>">
 						<li>Contact</li>
 					</a>
-					<a href="franchise.prepacadtutors.wpengine.com">
+					<a href="http://franchise.prepacadtutors.wpengine.com">
 						<li>Franchise Opportunities</li>
 					</a>
 					<a href="https://www.tutorpanel.com/login" target="_blank">
 						<li>Tutor Login</li>
-					</a>
-					<a href="">
-						<li>Site Map</li>
 					</a>
 					<a href="http://prepacadtutors.wpengine.com/privacy-policy/">
 						<li>Privacy Policy</li>
