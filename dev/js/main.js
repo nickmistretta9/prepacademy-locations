@@ -85,9 +85,104 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	// $(window).on('beforeunload', function() {
-	// 	$(window).scrollTop(0);
-	// });
+	var tutors = $('.tutor-outer');
+	var numberOfTutorsPerLoad = 10;
+	for(var i=numberOfTutorsPerLoad; i<tutors.length; i++) {
+		tutors.eq(i).addClass('hide');
+	}
+
+	// Grade filtering for tutors
+	$('.gradeFilter').change(function() {
+		var grade = $(this).val();
+		var tutorOuter = $('.tutor-outer');
+		var height = tutorOuter.first().outerHeight();
+		$(tutorOuter).each(function() {
+			$(this).removeClass('hide');
+			$(this).css('height', height);
+			if(grade !== 'reset') {
+				var gradesArray = [];
+				var possibleGrades = $(this).find('.grades span').text().split(', ');
+				for(var i=0; i<possibleGrades.length; i++) {
+					gradesArray.push(possibleGrades[i]);
+				}
+				if(gradesArray.indexOf(grade) === -1) {
+					$(this).addClass('hide');
+				} else {
+					$(this).removeClass('hide');
+				}
+			} else {
+				for(var i=numberOfTutorsPerLoad; i<tutorOuter.length; i++) {
+					tutorOuter.eq(i).addClass('hide');
+				}
+			}
+		});
+	});
+
+	$('.subjectFilter').change(function() {
+		var subject = $(this).val();
+		var tutorOuter = $('.tutor-outer');
+		var height = tutorOuter.first().outerHeight();
+		$(tutorOuter).each(function() {
+			$(this).removeClass('hide');
+			$(this).css('height', height);
+			if(subject !== 'reset') {
+				var subjectsArray = [];
+				var possibleSubjects = $(this).find('.subjects span').text().split(', ');
+				for(var i=0; i<possibleSubjects.length; i++) {
+					subjectsArray.push(possibleSubjects[i]);
+				}
+				if(subjectsArray.indexOf(subject) === -1) {
+					$(this).addClass('hide');
+				} else {
+					$(this).removeClass('hide');
+				}
+			} else {
+				for(var i=numberOfTutorsPerLoad; i<tutorOuter.length; i++) {
+					tutorOuter.eq(i).addClass('hide');
+				}
+			}
+		});
+	});
+
+	$('.nameFilter').change(function() {
+		var name = $(this).val();
+		var tutorOuter = $('.tutor-outer');
+		var height = tutorOuter.first().outerHeight();
+		$(tutorOuter).each(function() {
+			$(this).removeClass('hide');
+			$(this).css('height', height);
+			if(name !== 'reset') {
+				var possibleNames = $(this).find('.name').text();
+				if(possibleNames !== name) {
+					$(this).addClass('hide');
+				} else {
+					$(this).removeClass('hide');
+				}
+			} else {
+				for(var i=numberOfTutorsPerLoad; i<tutorOuter.length; i++) {
+					tutorOuter.eq(i).addClass('hide');
+				}
+			}
+		});
+	});
+
+	function loadMoreTutors() {
+		var tutorOuter = $('.tutor-outer');
+		var count = 0;
+		$('.tutor-outer').each(function() {
+			if(!$(this).hasClass('hide')) {
+				count++;
+			}
+		});
+		for(var i=count; i<count+numberOfTutorsPerLoad; i++) {
+			tutorOuter.eq(i).removeClass('hide');
+		}
+	}
+
+	$('#loadMoreTutors').click(function(e) {
+		e.preventDefault();
+		loadMoreTutors();
+	});
 
 	$('.state-select').change(function() {
 		$('.list').removeClass('hide');

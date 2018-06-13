@@ -663,10 +663,73 @@
 		}
 	}
 	&.tutors-content {
+		padding:0;
+		.tutors-filter {
+			width:100%;
+			background:$brand-success;
+			padding:10px 0;
+			@include max-width(1000px) {
+				padding-top:30px;
+			}
+			@include max-width(500px) {
+				padding-top:10px;
+			}
+			.container-fluid {
+				display:flex;
+				justify-content:space-between;
+				@include max-width(1000px) {
+					flex-wrap:wrap;
+					justify-content:center;
+				}
+				.grades {
+					flex:1 1 40%;
+				}
+				.subjects {
+					@include min-width(600px) {
+						margin:0 20px;
+					}
+				}
+				.subjects, .names {
+					flex:1 1 30%;
+				}
+				.grades, .subjects, .names {
+					display:flex;
+					align-items:center;
+					justify-content:center;
+					@include max-width(1000px) {
+						flex:1 1 45%;
+						max-width:45%;
+						margin-bottom: 10px;
+					}
+					@include max-width(600px) {
+						flex:1 1 100%;
+						max-width:none;
+					}
+					@include max-width(500px) {
+						display:flex;
+						flex-wrap:wrap;
+						justify-content:center;
+					}
+ 					p {
+						color:$brand-info;
+						font-style:italic;
+						margin-bottom: 0;
+						flex:1 1 70%;
+						text-align: center;
+						@include max-width(600px) {
+							text-align:left;
+						}
+						@include max-width(500px) {
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
 		.tutors-list {
 			display:flex;
 			flex-wrap:wrap;
-			margin-bottom:40px;
+			margin:40px 0;
 			justify-content:center;
 			.tutor-outer {
 				display:flex;
@@ -674,6 +737,7 @@
 				flex:1 1 18%;
 				max-width:20%;
 				margin:0 10px 20px 0;
+				min-height:600px;
 				@include max-width(1200px) {
 					max-width:20%;
 					flex:1 1 20%;
@@ -711,7 +775,7 @@
 					flex-flow:column wrap;
 					padding:20px 10px;
 					color:#fff;
-					min-height:380px;
+					min-height:410px;
 					.name {
 						font-size:36px;
 						text-transform:lowercase;
@@ -728,9 +792,11 @@
 					}
 					.subjects, .grades {
 						margin:10px 0;
+						font-size:22px;
+						text-transform: uppercase;
 						span {
-							font-size:22px;
-							text-transform: uppercase;
+							text-transform: none;
+							font-size:20px;
 						}
 					}
 					.btn-info {
@@ -739,8 +805,17 @@
 							color:#fff;
 							text-decoration:none;
 							font-style:italic;
+							.button-name {
+								text-transform:lowercase;
+								.upper {
+									text-transform: uppercase;
+								}
+							}
 						}
 					}
+				}
+				&.hide {
+					display:none;
 				}
 			}
 			.pagination {
@@ -756,6 +831,16 @@
 						font-style:italic;
 					}
 				}
+			}
+		}
+		.btn-info {
+			&.load-more {
+				display:block;
+				padding:10px;
+				text-align: center;
+				text-decoration:none;
+				margin:10px auto 30px;
+				width:25%;
 			}
 		}
 		.tutor-information {

@@ -12,6 +12,10 @@
 	@include max-width($screen-sm) {
 		padding:5px 0;
 	}
+	@include max-width(700px) {
+		background-image:url('../images/header-bg.jpg');
+		background-size:cover;
+	}
 	input {
 		background:$brand-primary;
 	}

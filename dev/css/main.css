@@ -7826,6 +7826,10 @@ iframe[name="google_conversion_frame"] {
   @media screen and (max-width: 768px) {
     .site-header {
       padding: 5px 0; } }
+  @media screen and (max-width: 700px) {
+    .site-header {
+      background-image: url("../images/header-bg.jpg");
+      background-size: cover; } }
   .site-header input {
     background: #00263A; }
   .site-header ::placeholder {
@@ -8019,7 +8023,8 @@ iframe[name="google_conversion_frame"] {
         transform: rotate(-45deg);
         transition: all 0.3s ease-in-out;
         height: 40px;
-        width: 40px; }
+        width: 40px;
+        text-decoration: none; }
         @media screen and (max-width: 1600px) {
           .navbar-default .container-fluid .social-icons a {
             margin: 0 5px; } }
@@ -8843,111 +8848,183 @@ iframe[name="google_conversion_frame"] {
           font-size: 32px; }
       .inner-content.locations-content .locations-list .list.hide {
         display: none; }
-  .inner-content.tutors-content .tutors-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    justify-content: center; }
-    .inner-content.tutors-content .tutors-list .tutor-outer {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 18%;
-      max-width: 20%;
-      margin: 0 10px 20px 0; }
-      @media screen and (max-width: 1200px) {
-        .inner-content.tutors-content .tutors-list .tutor-outer {
-          max-width: 20%;
-          flex: 1 1 20%; } }
-      @media screen and (max-width: 1100px) {
-        .inner-content.tutors-content .tutors-list .tutor-outer {
-          flex: 1 1 32%;
-          max-width: 32%; } }
-      @media screen and (max-width: 850px) {
-        .inner-content.tutors-content .tutors-list .tutor-outer {
-          flex: 1 1 45%;
-          max-width: 45%; } }
-      @media screen and (max-width: 600px) {
-        .inner-content.tutors-content .tutors-list .tutor-outer {
-          flex: 1 1 100%;
-          max-width: 100%; } }
-      .inner-content.tutors-content .tutors-list .tutor-outer .image {
-        height: 280px;
-        background-position: center;
-        background-size: cover;
-        overflow: hidden; }
-        @media screen and (max-width: 1200px) {
-          .inner-content.tutors-content .tutors-list .tutor-outer .image {
-            max-height: 215px; } }
-        @media screen and (max-width: 600px) {
-          .inner-content.tutors-content .tutors-list .tutor-outer .image {
-            max-height: 200px; } }
-        .inner-content.tutors-content .tutors-list .tutor-outer .image img {
-          width: 100%; }
-      .inner-content.tutors-content .tutors-list .tutor-outer .info {
-        background: #00263A;
+  .inner-content.tutors-content {
+    padding: 0; }
+    .inner-content.tutors-content .tutors-filter {
+      width: 100%;
+      background: #D8D3C4;
+      padding: 10px 0; }
+      @media screen and (max-width: 1000px) {
+        .inner-content.tutors-content .tutors-filter {
+          padding-top: 30px; } }
+      @media screen and (max-width: 500px) {
+        .inner-content.tutors-content .tutors-filter {
+          padding-top: 10px; } }
+      .inner-content.tutors-content .tutors-filter .container-fluid {
         display: flex;
-        flex-flow: column wrap;
-        padding: 20px 10px;
-        color: #fff;
-        min-height: 380px; }
-        .inner-content.tutors-content .tutors-list .tutor-outer .info .name {
-          font-size: 36px;
-          text-transform: lowercase; }
-          .inner-content.tutors-content .tutors-list .tutor-outer .info .name .upper {
-            text-transform: uppercase; }
-        .inner-content.tutors-content .tutors-list .tutor-outer .info .title {
-          background: #E5E1D4;
-          color: #00263A;
-          text-align: center;
-          line-height: 1;
-          padding: 5px; }
-        .inner-content.tutors-content .tutors-list .tutor-outer .info .subjects, .inner-content.tutors-content .tutors-list .tutor-outer .info .grades {
-          margin: 10px 0; }
-          .inner-content.tutors-content .tutors-list .tutor-outer .info .subjects span, .inner-content.tutors-content .tutors-list .tutor-outer .info .grades span {
+        justify-content: space-between; }
+        @media screen and (max-width: 1000px) {
+          .inner-content.tutors-content .tutors-filter .container-fluid {
+            flex-wrap: wrap;
+            justify-content: center; } }
+        .inner-content.tutors-content .tutors-filter .container-fluid .grades {
+          flex: 1 1 40%; }
+        @media (min-width: 600px) {
+          .inner-content.tutors-content .tutors-filter .container-fluid .subjects {
+            margin: 0 20px; } }
+        .inner-content.tutors-content .tutors-filter .container-fluid .subjects, .inner-content.tutors-content .tutors-filter .container-fluid .names {
+          flex: 1 1 30%; }
+        .inner-content.tutors-content .tutors-filter .container-fluid .grades, .inner-content.tutors-content .tutors-filter .container-fluid .subjects, .inner-content.tutors-content .tutors-filter .container-fluid .names {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          @media screen and (max-width: 1000px) {
+            .inner-content.tutors-content .tutors-filter .container-fluid .grades, .inner-content.tutors-content .tutors-filter .container-fluid .subjects, .inner-content.tutors-content .tutors-filter .container-fluid .names {
+              flex: 1 1 45%;
+              max-width: 45%;
+              margin-bottom: 10px; } }
+          @media screen and (max-width: 600px) {
+            .inner-content.tutors-content .tutors-filter .container-fluid .grades, .inner-content.tutors-content .tutors-filter .container-fluid .subjects, .inner-content.tutors-content .tutors-filter .container-fluid .names {
+              flex: 1 1 100%;
+              max-width: none; } }
+          @media screen and (max-width: 500px) {
+            .inner-content.tutors-content .tutors-filter .container-fluid .grades, .inner-content.tutors-content .tutors-filter .container-fluid .subjects, .inner-content.tutors-content .tutors-filter .container-fluid .names {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center; } }
+          .inner-content.tutors-content .tutors-filter .container-fluid .grades p, .inner-content.tutors-content .tutors-filter .container-fluid .subjects p, .inner-content.tutors-content .tutors-filter .container-fluid .names p {
+            color: #C8102E;
+            font-style: italic;
+            margin-bottom: 0;
+            flex: 1 1 70%;
+            text-align: center; }
+            @media screen and (max-width: 600px) {
+              .inner-content.tutors-content .tutors-filter .container-fluid .grades p, .inner-content.tutors-content .tutors-filter .container-fluid .subjects p, .inner-content.tutors-content .tutors-filter .container-fluid .names p {
+                text-align: left; } }
+            @media screen and (max-width: 500px) {
+              .inner-content.tutors-content .tutors-filter .container-fluid .grades p, .inner-content.tutors-content .tutors-filter .container-fluid .subjects p, .inner-content.tutors-content .tutors-filter .container-fluid .names p {
+                text-align: center; } }
+    .inner-content.tutors-content .tutors-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 40px 0;
+      justify-content: center; }
+      .inner-content.tutors-content .tutors-list .tutor-outer {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 18%;
+        max-width: 20%;
+        margin: 0 10px 20px 0;
+        min-height: 600px; }
+        @media screen and (max-width: 1200px) {
+          .inner-content.tutors-content .tutors-list .tutor-outer {
+            max-width: 20%;
+            flex: 1 1 20%; } }
+        @media screen and (max-width: 1100px) {
+          .inner-content.tutors-content .tutors-list .tutor-outer {
+            flex: 1 1 32%;
+            max-width: 32%; } }
+        @media screen and (max-width: 850px) {
+          .inner-content.tutors-content .tutors-list .tutor-outer {
+            flex: 1 1 45%;
+            max-width: 45%; } }
+        @media screen and (max-width: 600px) {
+          .inner-content.tutors-content .tutors-list .tutor-outer {
+            flex: 1 1 100%;
+            max-width: 100%; } }
+        .inner-content.tutors-content .tutors-list .tutor-outer .image {
+          height: 280px;
+          background-position: center;
+          background-size: cover;
+          overflow: hidden; }
+          @media screen and (max-width: 1200px) {
+            .inner-content.tutors-content .tutors-list .tutor-outer .image {
+              max-height: 215px; } }
+          @media screen and (max-width: 600px) {
+            .inner-content.tutors-content .tutors-list .tutor-outer .image {
+              max-height: 200px; } }
+          .inner-content.tutors-content .tutors-list .tutor-outer .image img {
+            width: 100%; }
+        .inner-content.tutors-content .tutors-list .tutor-outer .info {
+          background: #00263A;
+          display: flex;
+          flex-flow: column wrap;
+          padding: 20px 10px;
+          color: #fff;
+          min-height: 410px; }
+          .inner-content.tutors-content .tutors-list .tutor-outer .info .name {
+            font-size: 36px;
+            text-transform: lowercase; }
+            .inner-content.tutors-content .tutors-list .tutor-outer .info .name .upper {
+              text-transform: uppercase; }
+          .inner-content.tutors-content .tutors-list .tutor-outer .info .title {
+            background: #E5E1D4;
+            color: #00263A;
+            text-align: center;
+            line-height: 1;
+            padding: 5px; }
+          .inner-content.tutors-content .tutors-list .tutor-outer .info .subjects, .inner-content.tutors-content .tutors-list .tutor-outer .info .grades {
+            margin: 10px 0;
             font-size: 22px;
             text-transform: uppercase; }
-        .inner-content.tutors-content .tutors-list .tutor-outer .info .btn-info {
-          margin-top: auto; }
-          .inner-content.tutors-content .tutors-list .tutor-outer .info .btn-info a {
-            color: #fff;
-            text-decoration: none;
-            font-style: italic; }
-    .inner-content.tutors-content .tutors-list .pagination {
-      margin: 10px auto;
-      width: 100%;
-      text-align: center; }
-      .inner-content.tutors-content .tutors-list .pagination .page-numbers.current, .inner-content.tutors-content .tutors-list .pagination .page-numbers.next, .inner-content.tutors-content .tutors-list .pagination .page-numbers.prev {
-        color: #C8102E; }
-      .inner-content.tutors-content .tutors-list .pagination .page-numbers.current {
-        font-weight: bold;
-        font-style: italic; }
-  .inner-content.tutors-content .tutor-information {
-    display: flex;
-    margin-bottom: 40px; }
-    .inner-content.tutors-content .tutor-information .image {
-      flex: 1 1 5%;
-      display: flex;
-      align-items: flex-start;
-      margin: 20px 20px 0 0; }
-      .inner-content.tutors-content .tutor-information .image img {
+            .inner-content.tutors-content .tutors-list .tutor-outer .info .subjects span, .inner-content.tutors-content .tutors-list .tutor-outer .info .grades span {
+              text-transform: none;
+              font-size: 20px; }
+          .inner-content.tutors-content .tutors-list .tutor-outer .info .btn-info {
+            margin-top: auto; }
+            .inner-content.tutors-content .tutors-list .tutor-outer .info .btn-info a {
+              color: #fff;
+              text-decoration: none;
+              font-style: italic; }
+              .inner-content.tutors-content .tutors-list .tutor-outer .info .btn-info a .button-name {
+                text-transform: lowercase; }
+                .inner-content.tutors-content .tutors-list .tutor-outer .info .btn-info a .button-name .upper {
+                  text-transform: uppercase; }
+        .inner-content.tutors-content .tutors-list .tutor-outer.hide {
+          display: none; }
+      .inner-content.tutors-content .tutors-list .pagination {
+        margin: 10px auto;
         width: 100%;
-        border: 5px solid #C8102E; }
-    .inner-content.tutors-content .tutor-information .info {
+        text-align: center; }
+        .inner-content.tutors-content .tutors-list .pagination .page-numbers.current, .inner-content.tutors-content .tutors-list .pagination .page-numbers.next, .inner-content.tutors-content .tutors-list .pagination .page-numbers.prev {
+          color: #C8102E; }
+        .inner-content.tutors-content .tutors-list .pagination .page-numbers.current {
+          font-weight: bold;
+          font-style: italic; }
+    .inner-content.tutors-content .btn-info.load-more {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      margin: 10px auto 30px;
+      width: 25%; }
+    .inner-content.tutors-content .tutor-information {
       display: flex;
-      flex-flow: column wrap;
-      flex: 1 1 50%;
-      margin-left: 20px; }
-      .inner-content.tutors-content .tutor-information .info h3 {
-        margin-top: 15px;
-        margin-bottom: 0;
-        color: #C8102E;
-        font-style: italic; }
-      .inner-content.tutors-content .tutor-information .info .name {
-        color: #00263A;
-        font-weight: 600;
-        text-transform: uppercase; }
-        .inner-content.tutors-content .tutor-information .info .name h1 {
-          margin-bottom: 0; }
+      margin-bottom: 40px; }
+      .inner-content.tutors-content .tutor-information .image {
+        flex: 1 1 5%;
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 20px 0 0; }
+        .inner-content.tutors-content .tutor-information .image img {
+          width: 100%;
+          border: 5px solid #C8102E; }
+      .inner-content.tutors-content .tutor-information .info {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 50%;
+        margin-left: 20px; }
+        .inner-content.tutors-content .tutor-information .info h3 {
+          margin-top: 15px;
+          margin-bottom: 0;
+          color: #C8102E;
+          font-style: italic; }
+        .inner-content.tutors-content .tutor-information .info .name {
+          color: #00263A;
+          font-weight: 600;
+          text-transform: uppercase; }
+          .inner-content.tutors-content .tutor-information .info .name h1 {
+            margin-bottom: 0; }
   .inner-content.owners-content {
     padding-bottom: 40px; }
     .inner-content.owners-content h1 {
