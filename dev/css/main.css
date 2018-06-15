@@ -9662,6 +9662,7 @@ form textarea {
         background: #fff;
         padding: 20px;
         height: auto;
+        width: 90%;
         left: 50%;
         right: auto;
         -webkit-transform: translate(-50%, 0);
