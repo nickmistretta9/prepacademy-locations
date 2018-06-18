@@ -60,7 +60,7 @@ Template Name: Tutors Page
 				<select name="" id="" class="form-control nameFilter">
 					<option value="reset">Search By Name</option>
 					<?php
-					$args = array( 'post_type' => 'tutor', 'orderby' => 'date', 'order' => 'ASC');
+					$args = array( 'post_type' => 'tutor', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page' => -1);
 				    $loop = new WP_Query( $args );
 				    while ( $loop->have_posts() ) : $loop->the_post();
 				    	$name = types_render_field( "name", array("raw"=>"true") ); ?>
