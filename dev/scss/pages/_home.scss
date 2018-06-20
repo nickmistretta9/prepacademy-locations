@@ -576,6 +576,9 @@
 			select {
 				caret-color:#fff;
 				appearance:menulist;
+				option {
+					color:#000;
+				}
 			}
 			::placeholder {
 				color:#fff;

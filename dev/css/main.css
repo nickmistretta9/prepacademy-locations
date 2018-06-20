@@ -8503,6 +8503,8 @@ iframe[name="google_conversion_frame"] {
             .inner-content .content.contact .col-sm-6:last-child .contact-page-form .caldera-grid .col-sm-12 .form-group select {
               caret-color: #fff;
               appearance: menulist; }
+              .inner-content .content.contact .col-sm-6:last-child .contact-page-form .caldera-grid .col-sm-12 .form-group select option {
+                color: #000; }
             .inner-content .content.contact .col-sm-6:last-child .contact-page-form .caldera-grid .col-sm-12 .form-group ::placeholder {
               color: #fff; }
             .inner-content .content.contact .col-sm-6:last-child .contact-page-form .caldera-grid .col-sm-12 .form-group#fld_7683514_1-wrap {
@@ -8918,16 +8920,17 @@ iframe[name="google_conversion_frame"] {
         min-height: 600px; }
         @media screen and (max-width: 1200px) {
           .inner-content.tutors-content .tutors-list .tutor-outer {
-            max-width: 20%;
-            flex: 1 1 20%; } }
+            max-width: 25%;
+            flex: 1 1 24%; } }
         @media screen and (max-width: 1100px) {
           .inner-content.tutors-content .tutors-list .tutor-outer {
             flex: 1 1 32%;
-            max-width: 32%; } }
+            max-width: 32%;
+            min-height: 550px; } }
         @media screen and (max-width: 850px) {
           .inner-content.tutors-content .tutors-list .tutor-outer {
             flex: 1 1 45%;
-            max-width: 45%; } }
+            max-width: 50%; } }
         @media screen and (max-width: 600px) {
           .inner-content.tutors-content .tutors-list .tutor-outer {
             flex: 1 1 100%;
@@ -8942,16 +8945,16 @@ iframe[name="google_conversion_frame"] {
               max-height: 215px; } }
           @media screen and (max-width: 600px) {
             .inner-content.tutors-content .tutors-list .tutor-outer .image {
-              max-height: 200px; } }
+              min-hight: 300px; } }
           .inner-content.tutors-content .tutors-list .tutor-outer .image img {
             width: 100%; }
         .inner-content.tutors-content .tutors-list .tutor-outer .info {
           background: #00263A;
           display: flex;
-          flex-flow: column wrap;
+          flex-direction: column;
           padding: 20px 10px;
           color: #fff;
-          min-height: 410px; }
+          min-height: 450px; }
           .inner-content.tutors-content .tutors-list .tutor-outer .info .name {
             font-size: 36px;
             text-transform: lowercase; }
@@ -9728,6 +9731,8 @@ form textarea {
     .home-contact .footer-contact .caldera-grid select {
       caret-color: #fff;
       appearance: menulist; }
+      .home-contact .footer-contact .caldera-grid select option {
+        color: #000; }
     .home-contact .footer-contact .caldera-grid ::placeholder {
       color: #fff; }
     .home-contact .footer-contact input, .home-contact .footer-contact textarea, .home-contact .footer-contact select {
