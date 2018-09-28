@@ -3,25 +3,25 @@
 		<div class="flex">
 			<div class="links">
 				<ul>
-					<a href="http://prepacadtutors.wpengine.com/work-with-us/">
+					<a href="//prepacademytutors.com/work-with-us/">
 						<li>Work With Us</li>
 					</a>
-					<a href="http://prepacadtutors.wpengine.com/find-your-local-tutor/">
+					<a href="//prepacademytutors.com/find-your-local-tutor/">
 						<li>Find Your Local Tutor</li>
 					</a>
-					<a href="http://prepacadtutors.wpengine.com/blog/">
+					<a href="//prepacademytutors.com/blog/">
 						<li>Blog</li>
 					</a>
 					<a href="<?php echo home_url('/contact'); ?>">
 						<li>Contact</li>
 					</a>
-					<a href="http://franchise.prepacadtutors.wpengine.com">
+					<a href="//franchise.prepacademytutors.com">
 						<li>Franchise Opportunities</li>
 					</a>
 					<a href="https://www.tutorpanel.com/login" target="_blank">
 						<li>Tutor Login</li>
 					</a>
-					<a href="http://prepacadtutors.wpengine.com/privacy-policy/">
+					<a href="//prepacademytutors.com/privacy-policy/">
 						<li>Privacy Policy</li>
 					</a>
 				</ul>
@@ -31,7 +31,7 @@
 	        		  $number = str_replace(".", "", $number);
 	        	?>
 				<a href="<?php echo home_url('/'); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/logo.png"></a> <br>
-				<a href="http://www.prepacademytutors.com">http://www.prepacademytutors.com/</a> <br>
+				<a href="//www.prepacademytutors.com">http://www.prepacademytutors.com/</a> <br>
 				<div class="copy"><i class="fa fa-copyright"></i> All Rights Reserved. </div>
 				<a class="phone" href="tel:<?php echo $number; ?>"><?php echo get_theme_mod('phonenumber') ?></a> <br>
 				<div class="social-icons">

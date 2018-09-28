@@ -54,12 +54,12 @@
 					<div class="location-info"><?php echo get_theme_mod('franchise_name') ?></div>
 				</div>
 				<div>
-					<button class="btn-info"><a href="http://prepacadtutors.wpengine.com/find-your-local-tutor/">Change Location</a></button>
+					<button class="btn-info"><a href="//prepacademytutors.com/find-your-local-tutor/">Change Location</a></button>
 				</div>
 			</div>
 		</div>
 		<div class="franchise">
-			<a href="http://franchise.prepacadtutors.wpengine.com"><p>Franchise Opportunities</p></a>
+			<a href="//franchise.prepacademytutors.com"><p>Franchise Opportunities</p></a>
 		</div>
 	</header>
 
