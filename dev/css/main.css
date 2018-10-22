@@ -7844,7 +7844,8 @@ iframe[name="google_conversion_frame"] {
     left: 1%;
     top: 25%;
     z-index: 99;
-    transition: all 0.6s ease-in-out; }
+    transition: all 0.6s ease-in-out;
+    transform: scale(0.9); }
     @media screen and (max-width: 1500px) {
       .site-header .logo {
         transform: scale(0.9);
@@ -8857,7 +8858,7 @@ iframe[name="google_conversion_frame"] {
     .inner-content.tutors-content .tutors-filter {
       width: 100%;
       background: #D8D3C4;
-      padding: 10px 0; }
+      padding: 30px 0 10px; }
       @media screen and (max-width: 1000px) {
         .inner-content.tutors-content .tutors-filter {
           padding-top: 30px; } }

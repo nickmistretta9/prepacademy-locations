@@ -670,7 +670,7 @@
 		.tutors-filter {
 			width:100%;
 			background:$brand-success;
-			padding:10px 0;
+			padding:30px 0 10px;
 			@include max-width(1000px) {
 				padding-top:30px;
 			}
