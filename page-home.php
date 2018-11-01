@@ -20,7 +20,7 @@ Template Name: Home Page
 			<div class="cta-box">
 				<p class="title" data-mh>Making Parents and Kids Happy</p>
 				<div class="cta-action">
-					<a href="http://prepacadtutors.wpengine.com/testimonials/">Our Reviews</a>
+					<a href="//prepacademytutors.com/testimonials/">Our Reviews</a>
 				</div>
 			</div>
 			<div class="cta-box">
@@ -32,7 +32,7 @@ Template Name: Home Page
 			<div class="cta-box">
 				<p class="title" data-mh>Get the Tutoring Your Student Needs</p>
 				<div class="cta-action">
-					<a href="http://prepacadtutors.wpengine.com/our-services/">Our Services</a>
+					<a href="//prepacademytutors.com/our-services/">Our Services</a>
 				</div>
 			</div>
 		</div>
